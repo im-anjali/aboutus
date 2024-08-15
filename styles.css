@@ -190,20 +190,26 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  /* Adjust the gap as needed */
+  gap: 10px; /* Adjust the gap as needed */
 }
 
 .iframe-container iframe {
-  width: 400px;
-  /* Set a fixed width */
-  height: 225px;
-  /* Set a fixed height to maintain aspect ratio (16:9) */
-  border: 1px solid blue;
-  /* Remove border */
-  box-sizing: border-box;
-  /* Include border in the element's total width and height */
+  width: 100%;
+  max-width: 400px; /* Set a maximum width */
+  height: auto; /* Maintain aspect ratio */
+  aspect-ratio: 16 / 9; /* Maintain 16:9 aspect ratio */
+  border: 1px solid blue; /* Remove border */
+  box-sizing: border-box; /* Include border in the element's total width and height */
 }
+
+/* For small screens (e.g., phones) */
+@media (max-width: 480px) {
+  .iframe-container iframe {
+    max-width: 100%; /* Allow the iframe to fill the container */
+    height: auto; /* Maintain the aspect ratio */
+  }
+}
+
 
 .coep {
   font-size: 2.5rem;
