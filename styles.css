@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  overflow-x: hidden;
+  /* Prevent horizontal scrolling */
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  /* Space between cards */
+  padding: 20px;
+  /* Add padding to avoid card touching edges */
+}
+
+.card {
+  backdrop-filter: blur(3px);
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 20px 34px;
+  width: 80vw;
+  box-sizing: border-box;
+  overflow: auto;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+@font-face {
+  font-family: 'Azonix';
+  src: url('./Azonix.otf') format('opentype');
+}
+
+#vanta-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+}
+
+.logo1 img {
+  height: 9rem;
+  cursor: pointer;
+}
+
+.logo1 {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 40px;
+}
+
+@font-face {
+  font-family: 'venite';
+  src: url('./Venite\ Adoremus.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'nexa';
+  src: url('./NexaRustSans-Trial-Black2.ttf') format('opentype');
+}
+
+.main-title {
+  color: aliceblue;
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Azonix';
+  text-shadow: 0 0 20px rgba(0, 153, 255, 1), 0 0 30px rgba(0, 153, 255, 0.8), 0 0 40px rgba(0, 153, 255, 0.6);
+}
+
+
+
+/* Small screens (phones) */
+@media (max-width: 767px) {
+  .main-title {
+    font-size: 2rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.3rem;
+  }
+}
+
+
+
+
+.text {
+  color: white;
+  font-family: "Jost", sans-serif;  
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  /* Horizontally center */
+  align-items: center;
+  /* Vertically center */
+
+}
+
+.box {
+  height: auto;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-self: center;
+  box-shadow: 0 0 25px 10px rgba(0, 0, 255, 1);
+}
+
+.btn-14 {
+  position: relative;
+  color: white;
+  border: none;
+  z-index: 2;
+  height: 4rem;
+  background-color: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 20px;
+}
+
+.btn-14:before,
+.btn-14:after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  border: 1px solid;
+
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.btn-14:before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: #00aced;
+  border-left-color: #00aced;
+}
+
+.btn-14:after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: #00aced;
+  border-right-color: #00aced;
+}
+
+.btn-14:hover:before,
+.btn-14:hover:after {
+  border-color: #00aced;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 5px #00aced, 0 0 5px #00aced inset;
+}
+
+.date {
+  font-family: "Lato", sans-serif;
+  margin-top: 4rem;
+  color: white;
+}
+
+.iframe-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  /* Adjust the gap as needed */
+}
+
+.iframe-container iframe {
+  width: 400px;
+  /* Set a fixed width */
+  height: 225px;
+  /* Set a fixed height to maintain aspect ratio (16:9) */
+  border: 1px solid blue;
+  /* Remove border */
+  box-sizing: border-box;
+  /* Include border in the element's total width and height */
+}
+
+.coep {
+  font-size: 2.5rem;
+  font-family: 'venite';
+  text-decoration: underline;
+
+}
+
+@font-face {
+  font-family: 'nexanew';
+  src: url('./Nexa-Heavy.ttf') format('opentype');
+}
+
+.title {
+  color: aliceblue;
+  font-size: 2.5rem;
+  font-family: 'Azonix';
+  text-align: center;
+}
+
+@media (max-width: 961px) {
+  .coep {
+    font-size: 2.3rem;
+  }
+
+  .text {
+    font-size: 1.3rem;
+  }
+
+
+}
+
+@media (max-width: 721px) {
+  .logo1 img {
+    height: 10rem;
+  }
+
+  
+
+  .title {
+
+    font-size: 1.7rem;
+  }
+
+  .text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 665px) {
+  .coep {
+    font-size: 2rem;
+  }
+
+  .text {
+    font-size: 1.1rem;
+  }
+
+  .title {
+
+    font-size: 1.5rem;
+  }
+  .custom-btn {
+    font-size: 1.1rem;
+  }
+  .date{
+    font-size: 1.5rem;
+
+  }
+}
+
+@media(max-width: 506px) {
+  .logo1 img {
+    height: 2rem;
+  }
+}
+
+@media (max-width: 447px) {
+  .logo1 img {
+    height: 7rem;
+  }
+
+ 
+
+  .title {
+
+    font-size: 1.3rem;
+  }
+
+}
+
+@media (max-width: 390px) {
+  .logo1 img {
+    height: 3rem;
+  }
+
+ 
+
+  .title {
+
+    font-size: 1.3rem;
+  }
+
+ 
+
+}
+
+@media (max-width: 886px) {
+  .logo1 img {
+    height: 7rem;
+  }
+
+
+}
+
+
+/* Navbar */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+body {
+
+  margin: 0;
+  padding: 0;
+  color: white;
+  overflow-x: hidden;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+#vanta-canvas {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Navbar styles */
+
+.checkbox {
+  display: none;
+}
+
+.navbar-icon {
+  height: 3rem;
+  width: 3rem;
+  z-index: 999;
+  display: inline-block;
+}
+
+.msLink {
+  position: absolute;
+  top: 3vh;
+  left: 5vw;
+  z-index: 10000;
+}
+
+.button {
+  position: relative;
+  background-color: rgba(59, 59, 59, 0.571);
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 3vh;
+  right: 5vw;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem black;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav-elements {
+  display: none;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  background-color: rgba(52, 52, 52, 0.229);
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  pointer-events: none;
+}
+
+.nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -60vw;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.4s;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-align: center;
+  width: fit-content;
+  margin: auto;
+  font-family: "Oswald", sans-serif;
+  padding: 10px;
+}
+
+.item {
+  margin: 8px;
+}
+
+.link {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 5px 3px;
+  color: white;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  background-size: 220%;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  left: 0;
+  background: white;
+  transition: width 0.3s ease, left 0.3s ease;
+  -webkit-transition: width 0.3s ease, left 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.link:not(:hover)::after {
+  width: 0;
+  left: 0;
+}
+
+.checkbox:checked~.background {
+  transform: translateX(0);
+}
+
+.checkbox:checked~.nav {
+  opacity: 1;
+  width: 100%;
+  right: 0;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon,
+.icon::before,
+.icon::after {
+  width: 1.2rem;
+  height: 2px;
+  background-color: white;
+  display: inline-block;
+}
+
+.icon::before,
+.icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.3s;
+}
+
+.icon::before {
+  top: -0.5rem;
+}
+
+.icon::after {
+  top: 0.5rem;
+}
+
+.button:hover icon:before {
+  top: -0.8rem;
+}
+
+.button:hover icon::after {
+  top: 0.8rem;
+}
+
+.checkbox:checked+.button .icon {
+  background-color: transparent;
+}
+
+.checkbox:checked+.button .icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.checkbox:checked+.button .icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+.checkbox:checked body {
+  overflow-y: hidden;
+}
+
+@media screen and (max-width: 680px) {
+  .nav-elements {
+    display: flex !important;
+  }
+}
+
+/* Navbar styles end here */
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 30px;
+  /* Increased padding for more height */
+  box-sizing: border-box;
+
+}
+
+.about-us>div {
+  flex: 1;
+  margin: 0 10px;
+}
+
+h3 {
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 1.3em;
+  /* Increased font size for headings */
+}
+
+.contact-us p,
+.visit-us p {
+  margin: 10px 0;
+  /* Increased margin for better spacing */
+  font-size: 1.1em;
+  /* Increased font size for paragraphs */
+}
+
+@media (max-width: 900px) {
+  .about-us {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-us>div {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+/* read button style */
+#readMoreBtn1, #readLessBtn1, #readMoreBtn2, #readLessBtn2, #readMoreBtn3, #readLessBtn3,.toggleBtn {
+  display: none;
+  font-variant: all-petite-caps;
+
+}
+
+@media only screen and (max-width:700px) {
+  #readMoreBtn1, #readMoreBtn2, #readMoreBtn3{
+      display: flex;
+  }
+  .moreText {
+      display: none;
+  }
+#readMoreBtn1, #readLessBtn1, #readMoreBtn2, #readLessBtn2, #readMoreBtn3, #readLessBtn3 {
+  position: relative;
+  color: white;
+  border: none;
+  z-index: 2;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 4px;
+  outline: none;
+  height: 50px;
+  font-size: 1.2rem;
+  background-color: transparent;
+  
+}
+
+/* Pseudo-elements for buttons */
+#readMoreBtn1:before, #readMoreBtn1:after,
+#readLessBtn1:before, #readLessBtn1:after,
+#readMoreBtn2:before, #readMoreBtn2:after,
+#readLessBtn2:before, #readLessBtn2:after,
+#readMoreBtn3:before, #readMoreBtn3:after,
+#readLessBtn3:before, #readLessBtn3:after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  border: 1px solid;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+/* Before pseudo-element for buttons */
+#readMoreBtn1:before, #readLessBtn1:before,
+#readMoreBtn2:before, #readLessBtn2:before,
+#readMoreBtn3:before, #readLessBtn3:before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: #00aced;
+  border-left-color: #00aced;
+}
+
+/* After pseudo-element for buttons */
+#readMoreBtn1:after, #readLessBtn1:after,
+#readMoreBtn2:after, #readLessBtn2:after,
+#readMoreBtn3:after, #readLessBtn3:after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: #00aced;
+  border-right-color: #00aced;
+}
+
+/* Hover effects for buttons */
+#readMoreBtn1:hover:before, #readMoreBtn1:hover:after,
+#readLessBtn1:hover:before, #readLessBtn1:hover:after,
+#readMoreBtn2:hover:before, #readMoreBtn2:hover:after,
+#readLessBtn2:hover:before, #readLessBtn2:hover:after,
+#readMoreBtn3:hover:before, #readMoreBtn3:hover:after,
+#readLessBtn3:hover:before, #readLessBtn3:hover:after {
+  border-color: #00aced;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 5px #00aced, 0 0 5px #00aced inset;
+}
+
+/* Hover effects for buttons */
+#readMoreBtn1:hover, #readLessBtn1:hover,
+#readMoreBtn2:hover, #readLessBtn2:hover,
+#readMoreBtn3:hover, #readLessBtn3:hover {
+  cursor: pointer;
+  background-color: rgb(97, 98, 100);
+}
+
+
+.toggleContent {
+  display: none; /* Initially hide the additional content */
+}
+
+.toggleBtn.hide {
+  display: none; /* Initially hide the "Read Less" button */
+}
+
+.toggleBtn {
+ 
+  background-color: transparent;
+  border: 1px solid white;
+  color:white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 4px ;
+  outline: none;
+  border: 2px solid white ;
+  height: 50px;
+  font-size: 1rem;
+  text-align: center;
+ 
+}
+}
